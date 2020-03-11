@@ -4,7 +4,9 @@ const char* ssid = "PESU-Element Block";
 const char* password = "";
 const char* mqtt_server = "10.3.32.59";
 int p=0;
-char stat[16];
+const char s[]="Water oveflow";
+const char a[]="Water level ok";
+
 WiFiClient ESP32Client;
 PubSubClient client(ESP32Client);
 const int door2 = 2;
@@ -83,16 +85,18 @@ void loop() {
   if(watValue >=2800 && watValue <=4095){
     Serial.println("Waterleaking");
     leakage += 1;
-    stat="Water leaking";
+    //s = "Waterleaking";
+    client.publish("Stat",s);
   }
   else{
-    leakage=0;
-    stat="Water level ok";
+    leakage +=0;
+    //s = "Waterlevelok";
+    client.publish("Stat",a);
   }
   char countleakagestring[8];
   dtostrf(leakage,1,2,countleakagestring);
   client.publish("LeakageCount",countleakagestring);
-  client.publish("Stat",stat);
+  //client.publish("Stat",s);
   delay(5000);
   }
 }
