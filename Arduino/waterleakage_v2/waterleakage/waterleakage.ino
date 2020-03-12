@@ -6,7 +6,7 @@ const char* mqtt_server = "10.3.32.59";
 int p=0;
 const char s[]="Water oveflow";
 const char a[]="Water level ok";
-  WiFiClient ESP32Client;
+WiFiClient ESP32Client;
 PubSubClient client(ESP32Client);
 const int door2 = 2;
 long lastMsg = 0;
