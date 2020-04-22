@@ -1,3 +1,0 @@
-1. https://playground.arduino.cc/Main/MQGasSensors/
-2. https://www.ijitee.org/wp-content/uploads/papers/v8i6c2/F10420486C219.pdf
-3. https://randomnerdtutorials.com/esp32-adc-analog-read-arduino-ide/
