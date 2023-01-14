@@ -1,4 +1,4 @@
-# ConnectedLivingSpacesRepo
+# Connected Living Spaces Repo
  Bachelor Thesis 
  This project details a fully implemented Home Automation system which consists of the following functionalities-
     (a) Automated Locking System
